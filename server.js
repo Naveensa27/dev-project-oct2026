@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.json({
     status: 'success',
-    message: 'Welcome to New-Project-2026! Your DevOps pipeline is working.',
+    message: 'Welcome to New-Project-2026! Your DevOps pipeline is working, and the application is running smoothly, ready for deployment, and integrated with Prometheus for monitoring. Keep up the great work!, and Project Done by the Naveen S A.',
     environment: process.env.NODE_ENV || 'development',
     hostname: require('os').hostname(),
     timestamp: new Date().toISOString(),
