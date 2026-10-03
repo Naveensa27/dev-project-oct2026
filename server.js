@@ -56,6 +56,28 @@ app.get('/metrics', async (req, res) => {
   }
 });
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({
+    status: 'success',
+    message: 'Welcome to PulseApp!',
+    project_owner: 'Naveen',
+    architecture: {
+      source_control: 'Git & GitHub',
+      ci_cd: 'GitHub Actions',
+      cloud: 'AWS',
+      infrastructure_as_code: 'Terraform',
+      configuration_management: 'Ansible',
+      containerization: 'Docker',
+      orchestration: 'Kubernetes',
+      monitoring: 'Prometheus & Grafana'
+    },
+    environment: process.env.NODE_ENV || 'development',
+    hostname: require('os').hostname(),
+    timestamp: new Date().toISOString(),
+  });
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`PulseApp server is running on port ${PORT}`);
