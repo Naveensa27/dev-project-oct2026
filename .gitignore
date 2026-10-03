@@ -1,5 +1,5 @@
 cat << 'EOF' > .gitignore
-# Node.js
+# Node.js there all are the files and folders that should be ignored by Git for a Node.js project. This includes dependencies, logs, build artifacts, and IDE-specific files.
 node_modules/
 npm-debug.log*
 yarn-debug.log*
