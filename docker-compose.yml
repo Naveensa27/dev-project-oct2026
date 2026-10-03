@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  pulse-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pulse-app-local
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
